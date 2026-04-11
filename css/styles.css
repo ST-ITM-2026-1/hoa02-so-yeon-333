@@ -247,6 +247,42 @@ form button:hover {
     padding: 6px 0;
 }
 
+/* Dark Theme */
+body.dark-theme {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+body.dark-theme nav {
+    background-color: #16213e;
+}
+
+body.dark-theme header {
+    background-color: #0f3460;
+}
+
+body.dark-theme header p {
+    color: #b8d4e3;
+}
+
+body.dark-theme footer {
+    background-color: #0f3460;
+    color: #b8b8d0;
+}
+
+body.dark-theme h2 {
+    color: #b39ddb;
+}
+
+body.dark-theme h3 {
+    color: #b39ddb;
+}
+
+
+
+
+
+
 /* Base styles apply to desktops and large screens (769px+) */
 /* Responsive design - tablets and larger smartphones (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
