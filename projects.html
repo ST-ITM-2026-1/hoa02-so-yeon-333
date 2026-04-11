@@ -28,7 +28,14 @@
         <section id="projects">
             <h2><img src="images/pixel-ditto.png" alt="pixel ditto"> My Projects</h2>
 
-            <article>
+            <div id="filter-buttons">
+                <button class="filter-btn current" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="data">Data</button>
+            </div>
+
+            <article data-category="design">
                 <h3>CUP (Café Union Platform)</h3>
                 <p>
                     Designed and pitched a hyper-local B2B mobile platform for café owners to trade
@@ -41,7 +48,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article data-category="data">
                 <h3>Process Mining</h3>
                 <p>Analyzed a real bank's loan application process using the Disco process mining tool
                     as part of a Business Process Management course team project. Identified critical
@@ -52,7 +59,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article data-category="java">
                 <h3>Hero Maze Game</h3>
                 <p>A turn-based RPG dungeon escape game built in Java as a team
                     project. Players navigate a 4-room maze, defeat monsters, collect a key, and
@@ -63,7 +70,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article data-category="java">
                 <h3>Minimanimo Java Mini Game Collection</h3>
                 <p>A Java based mini-game collection developed collaboratively by a team of 4
                     using GitHub Flow. Features 4 games: Cham-Cham-Cham, Rock-Paper-Scissors,
@@ -75,7 +82,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article data-category="data">
                 <h3>Caffeine and Sleep Quality — Hypothesis Testing</h3>
                 <p> A statistics course project analyzing the relationship between caffeine
                     intake and sleep quality from a survey. Tested three hypotheses
