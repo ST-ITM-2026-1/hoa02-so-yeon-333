@@ -247,6 +247,36 @@ form button:hover {
     padding: 6px 0;
 }
 
+/* Filter button styles */
+#filter-buttons {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    padding: 0.4rem 1.2rem;
+    border: 2px solid #a390c8;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #7B5EA7;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-btn:hover {
+    background-color: #eee8ff;
+}
+
+.filter-btn.current {
+    background-color: #7B5EA7;
+    color: #ffffff;
+}
+
+
+
+
 /* Dark Theme */
 body.dark-theme {
     background-color: #1a1a2e;
@@ -278,6 +308,20 @@ body.dark-theme h3 {
     color: #b39ddb;
 }
 
+body.dark-theme .filter-btn {
+    background-color: #1a1a2e;
+    color: #b39ddb;
+    border-color: #7B5EA7;
+}
+
+body.dark-theme .filter-btn:hover {
+    background-color: #1e2a4a;
+}
+
+body.dark-theme .filter-btn.current {
+    background-color: #7B5EA7;
+    color: #ffffff;
+}
 
 
 
