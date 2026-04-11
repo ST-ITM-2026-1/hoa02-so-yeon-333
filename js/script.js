@@ -63,7 +63,9 @@ if (filterButtons.length > 0) {
 // Only run GitHub code if the github-profile element exists on the page
 const githubProfile = document.getElementById("github-profile");
 
-if (githubProfile) {
+const githubRepos = document.getElementById("github-repos");
+
+if (githubProfile && githubRepos) {
     const username = "so-yeon-333";
 
     // Fetch and display GitHub profile
@@ -120,6 +122,60 @@ if (githubProfile) {
         }
     }
 
-    // Call the function
+    // Fetch and display GitHub repositories
+    async function loadRepos() {
+        try {
+            const response = await fetch("https://api.github.com/users/" + username + "/repos");
+            const data = await response.json();
+
+            // Clear loading text
+            githubRepos.textContent = "";
+
+            // Loop through each repo and create a card
+            data.forEach(function (repo) {
+                // Create card container
+                const card = document.createElement("article");
+                card.classList.add("repo-card");
+
+                // Repo name as a link
+                const nameLink = document.createElement("a");
+                nameLink.href = repo.html_url;
+                nameLink.target = "_blank";
+                nameLink.textContent = repo.name;
+                nameLink.classList.add("repo-name");
+                card.appendChild(nameLink);
+
+                // Description
+                const desc = document.createElement("p");
+                desc.textContent = repo.description || "No description";
+                card.appendChild(desc);
+
+                // Details: language, stars, forks
+                const details = document.createElement("div");
+                details.classList.add("repo-details");
+
+                const lang = document.createElement("span");
+                lang.textContent = "💻 " + (repo.language || "N/A");
+                details.appendChild(lang);
+
+                const stars = document.createElement("span");
+                stars.textContent = "⭐ " + repo.stargazers_count;
+                details.appendChild(stars);
+
+                const forks = document.createElement("span");
+                forks.textContent = "🍴 " + repo.forks_count;
+                details.appendChild(forks);
+
+                card.appendChild(details);
+                githubRepos.appendChild(card);
+            });
+
+        } catch (error) {
+            githubRepos.textContent = "Failed to load repositories. Please try again later.";
+        }
+    }
+
+     // Call the function
     loadProfile();
+    loadRepos();
 }
