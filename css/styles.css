@@ -24,6 +24,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: flex-end; /* right-aligned */
+    align-items: center; 
 }
 
 nav ul li {
@@ -39,6 +40,19 @@ nav ul li a {
 /* Nav link hover effect */
 nav ul li a:hover {
     color: #e0ccff;
+}
+
+#theme-toggle {
+    background: none;
+    border: 2px solid #fff9c4;
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Header styles */
