@@ -309,6 +309,57 @@ body.dark-theme h3 {
     }
 }
 
+body.dark-theme article {
+    background-color: #1e2a4a;
+    border-left-color: #9575cd;
+}
+
+body.dark-theme .info-box {
+    background-color: #1e2a4a;
+    border-color: #9575cd;
+}
+
+body.dark-theme .contact-form-box {
+    background-color: #1e2a4a;
+    border-color: #9575cd;
+}
+
+body.dark-theme form input,
+body.dark-theme form textarea {
+    background-color: #1a1a2e;
+    border-color: #7B5EA7;
+    color: #e0e0e0;
+}
+
+body.dark-theme form label {
+    color: #e0e0e0;
+}
+
+body.dark-theme form button {
+    background-color: #7B5EA7;
+}
+
+body.dark-theme form button:hover {
+    background-color: #9575cd;
+}
+
+body.dark-theme .contact-info a {
+    color: #b39ddb;
+}
+
+body.dark-theme .contact-info a:hover {
+    color: #9575cd;
+}
+
+body.dark-theme .tech-list li {
+    background-color: #7B5EA7;
+}
+
+body.dark-theme #theme-toggle {
+    border-color: #b39ddb;
+}
+
+
 /* Responsive design - small smartphones (0px - 480px) */
 @media (max-width: 480px) {
     header {
